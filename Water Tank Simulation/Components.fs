@@ -29,6 +29,10 @@ module Components =
          | true, output -> Some(output)
          | false, _ -> None
 
+      member this.Neighbors
+         (* Want to just get the sequence of items; don't want to actually modify them *)
+         with get() = seq { for item in lookupMap do yield item }
+
    (* A simple POD that designates the location of some object *)
    type Location = 
       { Row : uint64;Col : uint64; }
