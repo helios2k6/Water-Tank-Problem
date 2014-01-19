@@ -43,9 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tools.fs" />
-    <Compile Include="Components.fs" />
-    <Compile Include="Predicates.fs" />
-    <Compile Include="Operations.fs" />
+    <Compile Include="CardinalDirection.fs" />
+    <Compile Include="WaterTank.fs" />
+    <Compile Include="Location.fs" />
+    <Compile Include="GridItem.fs" />
+    <Compile Include="Grid.fs" />
+    <Compile Include="GridState.fs" />
+    <Compile Include="GridStateOperations.fs" />
     <Compile Include="Driver.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
