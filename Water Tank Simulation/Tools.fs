@@ -16,3 +16,6 @@ module Core =
 
       member this.Delay(f) = f()
       member this.Return(x) = Some x
+
+   (* Internal single reference to the Maybe monad object *)
+   let internal maybe = new MaybeMonad()

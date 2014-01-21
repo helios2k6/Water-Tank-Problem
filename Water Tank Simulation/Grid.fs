@@ -5,9 +5,9 @@ namespace Components
    open System.Collections.Generic
 
    (* A representation of the actual grid of water tanks *)
-   type Grid<'a>(Start : 'a, End : 'a, GridItemSequence : GridItem<'a> seq) = 
-      static let GenerateLookupMap (gridItemSequence : GridItem<'a> seq) =
-         let map = new Dictionary<Location, GridItem<'a>>()
+   type Grid(Start : WaterTank, End : WaterTank, GridItemSequence : GridItem seq) = 
+      static let GenerateLookupMap (gridItemSequence : GridItem seq) =
+         let map = new Dictionary<Location, GridItem>()
          ignore (gridItemSequence |> Seq.map (fun item -> map.Add(item.Coordinate, item)))
          map
 

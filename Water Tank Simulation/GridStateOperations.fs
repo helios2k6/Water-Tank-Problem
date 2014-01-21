@@ -6,8 +6,6 @@ module GridState =
    open Components
    open WaterTank.Core
 
-   let private maybe = new MaybeMonad()
-
    (* Calculates and creates a new location object based on the direction the boat went *)
    let private CalculateLocation previousLocation direction =
       match direction with
@@ -25,8 +23,8 @@ module GridState =
          let newDestinationTank = { oldDestinationTank with AmountOfWater = oldDestinationTank.AmountOfWater + amountOfWaterToTransfer }
          Some (newStartTank, newDestinationTank)
   
-  (* Generates a new Grid Item sequence based on the old start tanka nd the new start tank *)
-   let GenerateNewGridItemSequence<'a when 'a : equality> (oldGridItems : 'a seq) oldStart oldDestination newStart newDestination =
+  (* Generates a new Grid Item sequence based on the old start tank and the new start tank *)
+   let private GenerateNewGridItemSequence (oldGridItems : GridItem seq) oldStart oldDestination newStart newDestination =
       query {
          for gridItem in oldGridItems do
          where (gridItem <> oldStart && gridItem <> oldDestination)
@@ -70,7 +68,7 @@ module GridState =
                newDestinationTankGridItem
 
          (* Create the new Grid *)
-         let newGrid = new Grid<WaterTank>(oldGrid.Start, oldGrid.End, newGridItemSequence)
+         let newGrid = new Grid(oldGrid.Start, oldGrid.End, newGridItemSequence)
 
          (* Create the new Grid State *)
          let newGridState = { Matrix = newGrid; BoatLocation = locationOfDestinationTank }
