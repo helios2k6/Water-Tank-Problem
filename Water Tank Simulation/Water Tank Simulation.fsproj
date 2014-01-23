@@ -55,14 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tools.fs" />
-    <Compile Include="CardinalDirection.fs" />
     <Compile Include="WaterTank.fs" />
-    <Compile Include="Location.fs" />
-    <Compile Include="GridItem.fs" />
-    <Compile Include="Grid.fs" />
-    <Compile Include="GridState.fs" />
-    <Compile Include="GridStateOperations.fs" />
-    <Compile Include="Driver.fs" />
+    <Compile Include="Graph.fs" />
+    <Compile Include="GraphState.fs" />
+    <Compile Include="GraphStateOperations.fs" />
+    <Compile Include="Move.fs" />
     <None Include="Script.fsx" />
     <None Include="packages.config" />
   </ItemGroup>
