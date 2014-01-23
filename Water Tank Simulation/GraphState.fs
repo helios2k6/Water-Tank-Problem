@@ -6,7 +6,7 @@ namespace Components
    open Components
 
    (* The state of the grid at any given point in time *)
-   type GridState = 
-      { Matrix : Grid; BoatLocation : Location; }
+   type GraphState = 
+      { Graph : Graph; BoatLocation : WaterTank; }
 
       override this.ToString() = sprintf "Boat Location: Location %A" this.BoatLocation
