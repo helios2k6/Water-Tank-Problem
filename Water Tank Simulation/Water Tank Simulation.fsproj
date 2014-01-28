@@ -60,8 +60,12 @@
     <Compile Include="GraphState.fs" />
     <Compile Include="GraphStateOperations.fs" />
     <Compile Include="Move.fs" />
+    <Compile Include="Itinerary.fs" />
+    <Compile Include="StrategyRules.fs" />
+    <Compile Include="IStrategy.fs" />
     <None Include="Script.fsx" />
     <None Include="packages.config" />
+    <Compile Include="ExhaustiveStrategy.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
