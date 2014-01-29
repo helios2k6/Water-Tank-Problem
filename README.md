@@ -8,6 +8,6 @@ Suppose further that you have a boat at the "Start" watertank. You may transfer 
 Find the shortest path such that every watertank n_i in G has the same amount of water and the boat ends up in the "End" watertank. You may pass through any watertank as many times as you like. 
 
 Limitations or modifications to this problem are as follows:
-	- You may or may not overflow a watertank
-	- You may or may not have discrete amounts of water; the amount of water must be expressed as an integer
-	- You may or may not require that the amount of water in each watertank must be maximal; you must maximize the amount of water in each watertank
+ + You may or may not overflow a watertank
+ + You may or may not have discrete amounts of water; the amount of water must be expressed as an integer
+ + You may or may not require that the amount of water in each watertank must be maximal; you must maximize the amount of water in each watertank
