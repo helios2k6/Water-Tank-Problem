@@ -1,4 +1,4 @@
-Water-Tank-Problem
+Water Tank Problem
 ==================
 
 Suppose you have graph G of watertanks. Each watertank n_i in G has a capcity of c_i. One of these watertanks is designated as the "Start" watertank and one of these watertanks is designated as the "End" watertank. Each tank starts off with some amount of water. 
